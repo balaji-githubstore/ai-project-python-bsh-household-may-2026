@@ -1,0 +1,49 @@
+{
+  "servers": {
+    "microsoft/playwright-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "gallery": "https://api.mcp.github.com",
+      "version": "0.0.1-seed"
+    },
+    "playwright-test": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "playwright",
+        "run-test-mcp-server"
+      ]
+    },
+    "github": {
+      "command": "D:\\Mine\\Company\\InfoVision Apr 2026\\github-mcp-server\\github-mcp-server.exe",
+      "args": [
+        "stdio"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "***"
+      }
+    },
+    "mcp-atlassian": {
+      "command": "uvx",
+      "args": [
+        "mcp-atlassian"
+      ],
+      "env": {
+        "JIRA_URL": "https://dbalacloud.atlassian.net/",
+        "JIRA_USERNAME": "dbala.cloud@gmail.com",
+        "JIRA_API_TOKEN": "**"
+      }
+    },
+    "selenium": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@angiejones/mcp-selenium@latest"
+      ]
+    }
+  },
+  "inputs": []
+}

@@ -1,0 +1,11 @@
+id,module,type,content
+1,playwright,coding_standard,"All Playwright tests must follow Page Object Model."
+2,api,validation,"API tests must validate status code and response schema."
+3,ui,selector_standard,"Selectors should use data-testid whenever possible."
+4,pr_review,quality,"Every pull request must include negative test scenarios."
+5,authentication,security,"Sensitive credentials should never be hardcoded in test scripts."
+6,reporting,execution,"Failed tests must capture screenshots and logs."
+7,api,error_handling,"API automation must validate error responses for invalid inputs."
+8,playwright,wait_strategy,"Avoid fixed waits. Use explicit waits and locator-based synchronization."
+9,test_data,data_management,"Test data should be isolated and reusable across environments."
+10,framework,structure,"Reusable utilities must be placed inside shared framework components."
