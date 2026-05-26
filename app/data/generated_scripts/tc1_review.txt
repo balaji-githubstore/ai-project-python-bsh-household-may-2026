@@ -1,0 +1,66 @@
+Okay, here's a detailed breakdown of the custom agent, incorporating best practices for QA automation and focusing on a robust and reliable system.  I've outlined the agent's purpose, capabilities, and operational instructions with a strong emphasis on clarity and testability.
+
+**Agent Name:** Telecom Recharge Verification & Error Handling Agent
+
+**Description:**
+
+This custom agent is designed to automate the verification and handling of recharge plans, focusing specifically on ensuring accurate display of recharge details, plan features, and error handling. It’s a foundational component for comprehensive recharge validation workflows.  The agent will proactively test various scenarios, including invalid inputs, to identify potential issues within the system.  It’s intended to serve as a core component for ongoing QA and regression testing.
+
+**Argument Hint:**  Focus on detailed test case data for each scenario and include edge case scenarios.  Consider incorporating logging for each test case to aid in debugging.
+
+**Tools:** ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
+
+**Functionality & Behavior:**
+
+This agent's primary function is to automate the following validation and verification tasks:
+
+1. **Plan Selection & Detail Verification:**
+   - **Core Task:** Dynamically simulate user input for recharge plan selection (from the Recharge Plans screen).  The agent will then verify that the displayed recharge plan details (plan name, duration, cost, data limit, call minutes, and any other relevant features) are accurate and consistent with the expected data.
+   - **Execution:** The agent will execute a series of tests based on the selected telecom circle.
+   - **Expected Result:**  The system accurately displays the planned recharge details.
+
+2. **Feature Verification:**
+   - **Core Task:**  Simulate user selection of recharge plans with specific features (e.g., data limit, call minutes, voice minutes, data transfer).
+   - **Execution:**  The agent will test that the system correctly presents the specified features according to the plan’s capabilities.
+   - **Expected Result:** The system displays the correct features of the planned recharge, including their proper values.
+
+3. **Error Handling Verification (Invalid Input):**
+    - **Core Task:** When an invalid telecom circle is selected, the agent needs to check for appropriate error messages and handle them.
+    - **Execution:** The agent will execute a series of tests with invalid telecom circles.  It should check for:
+        -  Clear and understandable error messages that are visible.
+        -  Appropriate error handling responses (e.g., displaying a user-friendly message to the user).
+        -  Avoid error display, but make it clear the selection process failed.
+    - **Expected Result:** The agent displays informative error messages to the user when an invalid circle is selected.
+
+4. **Data Accuracy Verification:**
+   - **Core Task:** Verify that recharge amount, data limit, call minutes, and data transfer are correctly displayed.
+   - **Execution:** The agent will test with different recharge amounts and data limits.
+   - **Expected Result:** The system accurately displays the recharge amount, data limits and call minutes.
+
+5. **History Verification:**
+   - **Core Task:**  Verify that recharge history is correctly presented for the selected telecom circle.
+   - **Execution:** Test with various recharge history data.
+   - **Expected Result:** History should be displayed correctly.
+
+**Specific Test Cases (Detailed):**
+
+| TestCaseID | Steps                                         | ExpectedResult                                      | Priority | Notes                                |
+|:---|:---|:---|:---|:---|
+| TC_ recharge_plans_001 | 1. Navigate to Recharge Plans screen.   |  The screen displays recharge plans for the selected telecom circle.   | High    | Basic – Valid screen presence.        |
+| TC_ recharge_plans_002 | 2. Select a different telecom circle.   | The recharge plans screen displays recharge plans for the selected new telecom circle. | High    | Basic – Valid screen presence.        |
+| TC_ recharge_plans_003 | 3. Verify recharge plan details displayed. | Recharge plan details (e.g., plan name, duration, cost) are displayed accurately. | High    | Focus on accuracy of data.          |
+| TC_ recharge_plans_004 | 4. Check for specific plan features.   | The system correctly displays specific features of the selected recharge plan (e.g., data limit, call minutes). | High    | Target specific features.            |
+| TC_ recharge_plans_005 | 5. Verify recharge amount displayed. | The recharge amount is displayed accurately, including any applicable fees. | High    |  Focus on correct calculation.         |
+| TC_ recharge_plans_006 | 6. Check for recharge history. | The system correctly shows recharge history for the selected telecom circle. | Medium   | Check for consistency across different history views. |
+| TC_ recharge_plans_007 | 7. Select a plan with data limit of 100MB. | The recharge plan screen displays a recharge plan with a data limit of 100MB. | High    |  Verify the data limit is displayed correctly. |
+| TC_ recharge_plans_008 | 8. Select a plan with call minutes of 1000. | The recharge plan screen displays a recharge plan with 1000 call minutes. | High    |  Verify the call minutes are displayed correctly. |
+| TC_ recharge_plans_009 | 9. Verify recharge confirmation. | Recharge confirmation is displayed with the correct details. | High    | Ensure the confirmation details are accurate. |
+| TC_ recharge_plans_010 | 10. Test error handling when selecting an invalid circle. | A clear and informative error message is displayed when an invalid telecom circle is selected. | High    | Verify proper error handling message. |
+
+**Considerations for Automation:**
+
+*   **Data-Driven:** The agent should use configurable data sets (e.g., a dictionary or CSV file) to provide consistent test data.
+*   **Logging:** Implement comprehensive logging to capture test results, error messages, and relevant data.
+*   **Reporting:**  Generate clear and concise test reports summarizing test results and identifying potential issues.
+
+Let me know if you'd like me to refine any of these sections or add more specific test cases.

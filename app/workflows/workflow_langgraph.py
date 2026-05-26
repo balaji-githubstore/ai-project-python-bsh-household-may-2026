@@ -54,11 +54,14 @@ def generate_testcase(state):
         "script": script
     }
 
+
 def review_testcase(state):
     reviewed_testcase = review_testcase_agent(state["script"])
+    with open(f"app/data/generated_scripts/tc1_review.txt", "w", encoding="UTF-8") as file:
+            file.write(reviewed_testcase)
     return {
-        "reviewed_testcase": reviewed_testcase
-    }
+            "reviewed_testcase": reviewed_testcase
+        }
 
 
 # review_testcase
@@ -74,7 +77,7 @@ workflow.set_entry_point("fetch_ticket")
 workflow.add_edge("fetch_ticket","analyze_requirement")
 workflow.add_edge("analyze_requirement","retrieve_internal_polices")
 workflow.add_edge("analyze_requirement","generate_testcase")
-workflow.add_node("generate_testcase","review_testcase")
+workflow.add_edge("generate_testcase","review_testcase")
 
 workflow.set_finish_point("review_testcase")
 
