@@ -44,7 +44,7 @@ Your job is to generate high-quality test cases that  strictly follow the provid
 
 Return the result strictly as a csv with these columns and no extra commentary before or after the table:
 
-| TestCaseID |Steps | ExpectedResult |
+| TestCaseID | Steps | ExpectedResult |
 
 ## Quality Bar
 

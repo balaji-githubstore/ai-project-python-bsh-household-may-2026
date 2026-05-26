@@ -32,7 +32,7 @@ def analyze_prompt_loader():
 
 def generate_testcase_prompt_loader():
     prompt_template = """
-    You are an expert QA automation engineer.
+    You are an expert QA automation engineer. 
 
     Follow these project instructions strictly:
 
@@ -43,7 +43,30 @@ def generate_testcase_prompt_loader():
     """
 
     prompt = PromptTemplate(
-        input_variables=["agent_rules", "user_task"],
+        input_variables=["agent_prompt", "user_task"],
+        template=prompt_template
+    )
+    return prompt
+
+def generate_test_script_prompt_loader():
+    prompt_template = """
+    {agent_prompt}
+
+    Requirements:
+    {requirements}
+
+    Internal Rules:
+    {rules}
+
+    Generate Selenium Python automation code.
+    """
+
+    prompt = PromptTemplate(
+        input_variables=[
+            "agent_prompt",
+            "requirements",
+            "rules"
+        ],
         template=prompt_template
     )
     return prompt
@@ -81,26 +104,20 @@ def pr_review_prompt_loader():
     )
     return prompt
 
-
-def generate_test_script_prompt_loader():
+def review_testcase_prompt_loader():
     prompt_template = """
+    You are an expert QA automation engineer. 
+
+    Follow these project instructions strictly:
+
     {agent_prompt}
 
-    Requirements:
-    {requirements}
-
-    Internal Rules:
-    {rules}
-
-    Generate Selenium Python automation code.
+    Task:
+    {user_task}
     """
 
     prompt = PromptTemplate(
-        input_variables=[
-            "agent_prompt",
-            "requirements",
-            "rules"
-        ],
+        input_variables=["agent_prompt", "user_task"],
         template=prompt_template
     )
     return prompt

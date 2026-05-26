@@ -1,0 +1,13 @@
+
+| TestCaseID | Steps | ExpectedResult |
+|---|---|---|
+| TC_ recharge_plans_001 | 1. Navigate to the Recharge Plans page. |  The system displays the recharge plans for the selected telecom circle. |
+| TC_ recharge_plans_002 | 2. Verify plan details are displayed. | The plan details (data plan, price, validity period) are displayed accurately for the selected telecom circle. |
+| TC_ recharge_plans_003 | 3. Check for plan options. |  The system shows all available plan options (e.g., data, voice, SMS). |
+| TC_ recharge_plans_004 | 4. Select a specific plan option. |  The system displays the selected plan option with its details. |
+| TC_ recharge_plans_005 | 5. Verify plan details are shown. | The plan details (data, price, validity period) are displayed accurately for the selected telecom circle. |
+| TC_ recharge_plans_006 | 6.  Check plan details for a different telecom circle. |  The system displays the recharge plans for a different telecom circle. |
+| TC_ recharge_plans_007 | 7. Verify plan options are available. | The system confirms that all available plan options are presented to the user. |
+| TC_ recharge_plans_008 | 8. Test plan availability. | Plan options appear for all selected telecom circles |
+| TC_ recharge_plans_009 | 9. Handle Invalid Telecom Circle Input |  If the selected telecom circle is not present, an error message is displayed. |
+| TC_ recharge_plans_010 | 10. Test error handling | Application demonstrates proper error handling when telecom circle input is invalid. |
