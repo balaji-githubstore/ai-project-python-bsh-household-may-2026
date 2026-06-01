@@ -1,3 +1,9 @@
+**Branch Summary**
+
+- **main**: GenAI experimentation repository covering LLMs, MCP, vector databases, RAG, and automation use cases. Core demos and prototypes for Gemini, Ollama, ChromaDB, RAG pipelines, and MCP integrations.
+- **pr-review-project**: AI-powered pull request review framework integrating GitHub, Jira, semantic search, and review automation — tooling and example scripts for automated PR analysis and reviewer assistance.
+- **agentic-ai-project-e2e**: Multi-agent AI system that automates software-engineering workflows end-to-end, from Jira analysis through task orchestration, code generation, test generation, and deployment orchestration.
+
 # Python AI Project — BSH Household AI
 
 Short description
