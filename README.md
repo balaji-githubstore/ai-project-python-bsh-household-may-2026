@@ -4,6 +4,9 @@
 - **pr-review-project**: AI-powered pull request review framework integrating GitHub, Jira, semantic search, and review automation — tooling and example scripts for automated PR analysis and reviewer assistance.
 - **agentic-ai-project-e2e**: Multi-agent AI system that automates software-engineering workflows end-to-end, from Jira analysis through task orchestration, test case generation, testcase review, code generation orchestration.
 
+**Session Notes Updated**
+- `session_notes/` — session notes, slides, important links are updated. 
+
 # Python AI Project — BSH Household AI
 
 Short description
